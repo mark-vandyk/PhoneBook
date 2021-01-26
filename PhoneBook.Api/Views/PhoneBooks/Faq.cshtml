@@ -1,0 +1,31 @@
+﻿@{
+    ViewData["Title"] = "FAQ";
+}
+<h1>Phone Book&#xae; Frequently Asked Questions</h1>
+<small>Last Updated: 2021-01-25 by Mark van Dyk</small>
+<br />
+<br />
+<p><strong>Why bother with a <a asp-area="" asp-controller="PhoneBooks" asp-action="Privacy">Privacy</a> policy when there is clearly no privacy on your website?</strong></p>
+<p>
+    We are aware that the lack of user authentication means everyone can see everyone else's contact information, however having a Privacy Policy is a legal requirement. <br />
+</p>
+
+<p><strong>I have a friend who lives overseas. Their phone number starts with +44. Why can't I add them to my phone book?</strong></p>
+<p>
+    This Phone Book&#xae; app is designed to store LOCAL phone numbers only.<br />
+    The following are examples of valid phone numbers (where 'x' is a digit):<br />
+</p>
+<ul>
+    <li>xxxxxxxxxx</li>
+    <li>(xxx) xxx xxxx</li>
+    <li>xxx xxx xxxx</li>
+    <li>xxx-xxx-xxxx</li>
+</ul>
+
+<p><strong>My contact's First/Last name is only one letter long.<br />
+    However when creating the entry, it insists on a First/Last name of at least 2 letters.</strong></p>
+<p>
+    This Phone Book&#xae; app is designed to store names which contain at least 2 characters.
+    However, you could add a space (' ') just before a name to fool the validation into accepting a single character name.
+    PLEASE NOTE: Adding a space after a single character First/Last name will cause an unhandled exception to occur and crash the system. Please don't do that.
+</p>
