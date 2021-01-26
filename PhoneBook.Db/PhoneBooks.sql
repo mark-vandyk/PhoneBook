@@ -1,0 +1,6 @@
+﻿CREATE TABLE [dbo].[PhoneBooks]
+(
+	[Id] INT NOT NULL IDENTITY(1,1) PRIMARY KEY,
+	[Name] VARCHAR(128) NOT NULL DEFAULT '',
+	CONSTRAINT CHK_Name CHECK (LEN([Name]) > 0)
+)

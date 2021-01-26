@@ -1,0 +1,11 @@
+﻿CREATE TABLE [dbo].[Entries]
+(
+	[Id] INT NOT NULL IDENTITY(1,1) PRIMARY KEY,
+	[PhoneBookId] INT NOT NULL FOREIGN KEY REFERENCES PhoneBooks(Id) ON DELETE CASCADE,
+	[FirstName] VARCHAR(128) NOT NULL DEFAULT '', 
+    [LastName] VARCHAR(128) NOT NULL DEFAULT '', 
+    [PhoneNumber] VARCHAR(20) NOT NULL DEFAULT '',
+	CONSTRAINT CHK_FirstName CHECK (LEN([FirstName]) > 1),
+	CONSTRAINT CHK_LastName CHECK (LEN([LastName]) > 1),
+	CONSTRAINT CHK_PhoneNumber CHECK (LEN([PhoneNumber]) > 9)
+)
